@@ -7,7 +7,6 @@ include_once dirname(__FILE__) . "/connect.inc.php";
 
 $query = $fpdo->from('db2.user')->order('db2.user.name')->getQuery();
 echo "$query\n";
-
 ?>
 --EXPECTF--
 SELECT db2.user.*

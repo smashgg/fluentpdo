@@ -6,10 +6,10 @@ include_once dirname(__FILE__) . "/connect.inc.php";
 /* @var $fpdo FluentPDO */
 
 $query = $fpdo->update('user')
-	->set(array('type' => 'author'))
-	->where('id', 2)
-	->orderBy('name')
-	->limit(1);
+    ->set(array('type' => 'author'))
+    ->where('id', 2)
+    ->orderBy('name')
+    ->limit(1);
 
 echo $query->getQuery() . "\n";
 print_r($query->getParameters()) . "\n";

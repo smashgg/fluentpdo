@@ -5,7 +5,6 @@ PDO::FETCH_OBJ option.
 include_once dirname(__FILE__) . "/connect.inc.php";
 /* @var $fpdo FluentPDO */
 
-
 $query = $fpdo->from('user')->where('id > ?', 0)->orderBy('name');
 $query = $query->where('name = ?', 'Marek');
 $fpdo->getPdo()->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);

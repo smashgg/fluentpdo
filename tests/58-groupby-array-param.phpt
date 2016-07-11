@@ -6,10 +6,10 @@ include_once dirname(__FILE__) . "/connect.inc.php";
 /* @var $fpdo FluentPDO */
 
 $query = $fpdo
-	->from('user')
-	->select(null)
-	->select('count(*) AS total_count')
-	->groupBy(array('id', 'name'));
+    ->from('user')
+    ->select(null)
+    ->select('count(*) AS total_count')
+    ->groupBy(array('id', 'name'));
 
 echo $query->getQuery() . "\n";
 print_r($query->fetch());

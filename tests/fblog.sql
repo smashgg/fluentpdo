@@ -1,5 +1,3 @@
--- Adminer 3.2.2 MySQL dump
-
 SET NAMES utf8;
 SET foreign_key_checks = 0;
 SET time_zone = 'SYSTEM';
@@ -64,5 +62,3 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `country_id`, `type`, `name`) VALUES
 (1,	1,	'admin',	'Marek'),
 (2,	1,	'author',	'Robert');
-
--- 2012-01-04 22:00:18

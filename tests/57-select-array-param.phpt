@@ -6,10 +6,10 @@ include_once dirname(__FILE__) . "/connect.inc.php";
 /* @var $fpdo FluentPDO */
 
 $query = $fpdo
-	->from('user')
-	->select(null)
-	->select(array('id', 'name'))
-	->where('id < ?', 2);
+    ->from('user')
+    ->select(null)
+    ->select(array('id', 'name'))
+    ->where('id < ?', 2);
 
 echo $query->getQuery() . "\n";
 print_r($query->getParameters());

@@ -6,9 +6,9 @@ include_once dirname(__FILE__) . "/connect.inc.php";
 /* @var $fpdo FluentPDO */
 
 $query = $fpdo->deleteFrom('user')
-	->where('id', 2)
-	->orderBy('name')
-	->limit(1);
+    ->where('id', 2)
+    ->orderBy('name')
+    ->limit(1);
 
 echo $query->getQuery() . "\n";
 print_r($query->getParameters()) . "\n";

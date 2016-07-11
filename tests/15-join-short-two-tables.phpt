@@ -6,9 +6,9 @@ include_once dirname(__FILE__) . "/connect.inc.php";
 /* @var $fpdo FluentPDO */
 
 $query = $fpdo->from('comment')
-		->where('comment.id', 1)
-		->leftJoin('user comment_author')->select('comment_author.name AS comment_name')
-		->leftJoin('article.user AS article_author')->select('article_author.name AS author_name');
+    ->where('comment.id', 1)
+    ->leftJoin('user comment_author')->select('comment_author.name AS comment_name')
+    ->leftJoin('article.user AS article_author')->select('article_author.name AS author_name');
 echo $query->getQuery() . "\n";
 $result = $query->fetch();
 print_r($result);
