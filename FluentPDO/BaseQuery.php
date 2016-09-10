@@ -18,7 +18,7 @@ abstract class BaseQuery implements IteratorAggregate
     private $object = false;
 
     /** @var bool */
-    private $explain = false;
+    protected $explain = false;
 
     /** @var array - definition clauses */
     protected $clauses = array();
